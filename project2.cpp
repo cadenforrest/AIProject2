@@ -1,11 +1,22 @@
 #include <iostream>
 using namespace std;
 
+//Constant Variables
 const int COLUMNS = 7;
 const int ROWS = 6;
+const int AI_1 = 1;
+const int AI_2 = 2;
+const int DEPTH_2 = 2;
+const int DEPTH_4 = 4;
+const int DEPTH_8 = 8;
 
+//Variables
 char board[ROWS][COLUMNS];
+int currentPlayer = AI_1;
+int turns = 0;
+bool gameOver = false;
 
+//Function Prototypes
 void initalizeBoard();
 void displayBoard(char [ROWS][COLUMNS]);
 
@@ -17,6 +28,7 @@ int main(){
 	return 0;
 }
 
+//Function Definitions
 void initalizeBoard(){
     for(int r = 0; r < ROWS; r++){
         for(int c = 0; c < COLUMNS; c++){
